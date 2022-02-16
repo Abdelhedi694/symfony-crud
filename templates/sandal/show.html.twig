@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+    <p>nom de la sandal : {{ sandal.name }}</p>
+    <p>description : {{ sandal.description }}</p>
+    <a href="{{ path('deleteSandal', {id : sandal.id}) }}">Supprimer</a>
+    <a href="{{ path('sandals') }}">Retour</a>
+
+
+
+{% endblock %}

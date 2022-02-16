@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}sandals{% endblock %}
+
+{% block body %}
+{% for sandal in sandals %}
+    <hr>
+    <p>nom de la sandal : {{ sandal.name }}</p>
+    <p>description : {{ sandal.description }}</p>
+    <a href="{{ path("uneSandal", {id : sandal.id })}}">Voir</a>
+    <a href="{{ path('update', {id : sandal.id}) }}">Modifier</a>
+    <hr>
+
+    {% endfor %}
+{% endblock %}
